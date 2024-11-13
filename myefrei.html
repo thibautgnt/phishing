@@ -94,13 +94,14 @@
 
         button {
             padding: 10px;
-            background-color: #007bff;
+            background-color: #377fbc;
             color: white;
             border: none;
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            max-width: 40%;
         }
 
         button:hover {
@@ -168,11 +169,12 @@
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" required>
-
-            <button type="submit">Soumettre</button>
+            <p style="font-size: 10px;"><a href="#">Identifiants oubliés ?</a> Contactez-le +33 188 289 250</p>
+            <p class="legal">En me connectant, j'accepte les <a href="#">conditions d'utilisations</a> du service SSO Efrei notamment en matière de données personnelles.</p>
+            <img src="captcha.png" alt="Captcha" style="width: 50%;"><br />
+            <button type="submit">Se connecter</button>
         </form><br />
-        <p><a href="#">Identifiants oubliés ?</a> Contactez-le +33 188 289 250</p>
-        <p class="legal">En me connectant, j'accepte les <a href="#">conditions d'utilisations</a> du service SSO Efrei notamment en matière de données personnelles.</p>
+
     </div>
 </div>
 </body>
