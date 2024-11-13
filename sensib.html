@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phished !</title>
+    <style>
+        /* Réinitialiser les marges pour assurer un plein écran */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hauteur et largeur en pleine page */
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: black; /* Couleur de fond pour les bordures éventuelles */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style pour le conteneur de texte */
+        #info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em; /* Agrandir un peu le texte */
+            background-color: rgba(0, 0, 0, 0.7); /* Légère transparence pour plus de lisibilité */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style de l'image pour la réduire */
+        img {
+            height: 80vh; /* Hauteur de l'image réduite */
+            width: auto; /* Ajuste la largeur automatiquement pour garder le ratio */
+        }
+    </style>
+</head>
+<body>
+<div id="info">
+    <p>Identifiant entré : <span id="username">Non fourni</span></p>
+    <p>Mot de passe entré : <span id="password">Non fourni</span></p>
+</div>
+<img src="https://capsi.tech/wp-content/uploads/2020/08/AFFICHE-CAPSI_PHISHING_01.png" alt="Affiche Phishing">
+
+<script>
+    // Fonction pour obtenir les paramètres de l'URL
+    function getQueryParameter(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param) || "Non fourni";
+    }
+
+    // Récupérer et afficher l'identifiant et le mot de passe
+    document.getElementById('username').textContent = getQueryParameter('username');
+    document.getElementById('password').textContent = getQueryParameter('password');
+</script>
+</body>
+</html>
