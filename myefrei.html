@@ -121,6 +121,38 @@
         .legal a:hover {
             text-decoration: underline;
         }
+
+        /* Media queries pour responsive */
+        @media (max-width: 768px) {
+            .login-box {
+                max-width: 90%;
+                transform: translateX(0); /* Suppression du décalage horizontal sur les petits écrans */
+                padding: 20px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            button {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .legal {
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 <body>
